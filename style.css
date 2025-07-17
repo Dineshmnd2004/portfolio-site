@@ -1,38 +1,65 @@
+/* General Page Styling */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background-color: #f5f5f5;
   color: #333;
 }
 
+/* Header Section */
 header {
-  background: #1e3a8a;
+  background-color: #1e3a8a;
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-top: 0;
 }
 
 nav a {
+  color: #cbd5e1;
   margin: 0 1rem;
-  color: #bbdefb;
   text-decoration: none;
+  font-weight: bold;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styling */
 section {
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 900px;
   margin: auto;
 }
 
-.project-card {
-  background: white;
-  border-left: 4px solid #1e3a8a;
-  padding: 1rem;
+section h2 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
   margin-bottom: 1rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+/* Project Cards */
+.project-card {
+  background-color: white;
+  border-left: 4px solid #1e3a8a;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+/* Resume Button */
 .btn {
   display: inline-block;
   background-color: #1e3a8a;
@@ -41,21 +68,38 @@ section {
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
 }
 
 .btn:hover {
   background-color: #3742fa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-
+/* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #1e3a8a;
+  background-color: #1e3a8a;
   color: white;
+  padding: 1rem;
   margin-top: 2rem;
+}
+
+/* Responsive Text */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
 }
