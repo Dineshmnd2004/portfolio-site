@@ -18,6 +18,18 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+  color: #58a6ff;
+}
+
+/* Keep hover effect, but no underline */
+a:hover {
+  color: #1f6feb;
+  text-decoration: none;
+}
+
 /* Header / Hero Section */
 .hero {
   background-color: #0d1117;
@@ -140,17 +152,6 @@ footer {
   padding: 1rem;
   border-top: 1px solid #1f6feb;
   margin-top: 2rem;
-}
-/* Remove underline from all links */
-a {
-  text-decoration: none;
-  color: #58a6ff;
-}
-
-/* Keep hover effect, but no underline */
-a:hover {
-  color: #1f6feb;
-  text-decoration: none;
 }
 
 /* Responsive */
