@@ -1,18 +1,20 @@
-/* General Page Styling */
+/* -------- Base Styles -------- */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header Section */
+/* -------- Header -------- */
 header {
   background-color: #1e3a8a;
   color: white;
   text-align: center;
   padding: 2rem 1rem;
+  position: relative;
 }
 
 header h1 {
@@ -36,7 +38,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Section Styling */
+/* -------- Sections -------- */
 section {
   padding: 2rem 1rem;
   max-width: 900px;
@@ -49,7 +51,7 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* Project Cards */
+/* -------- Project Cards -------- */
 .project-card {
   background-color: white;
   border-left: 4px solid #1e3a8a;
@@ -59,7 +61,7 @@ section h2 {
   border-radius: 4px;
 }
 
-/* Resume Button */
+/* -------- Resume Button -------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -73,6 +75,7 @@ section h2 {
   font-size: 1rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
 }
 
 .btn:hover {
@@ -81,32 +84,7 @@ section h2 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Footer */
-footer {
-  text-align: center;
-  background-color: #1e3a8a;
-  color: white;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* Responsive Text */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  section h2 {
-    font-size: 1.25rem;
-  }
-
-  .btn {
-    padding: 8px 14px;
-    font-size: 0.9rem;
-  }
-}
-
+/* -------- Toggle Button -------- */
 .toggle-btn {
   position: absolute;
   top: 1.5rem;
@@ -125,7 +103,16 @@ footer {
   background-color: #cbd5e1;
 }
 
-/* Dark Mode Styling */
+/* -------- Footer -------- */
+footer {
+  text-align: center;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* -------- Dark Mode Styles -------- */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -150,3 +137,34 @@ body.dark-mode .btn:hover {
   background-color: #0d47a1;
 }
 
+body.dark-mode .toggle-btn {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background-color: #555;
+}
+
+/* -------- Responsive Design -------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section h2 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn {
+    top: 1rem;
+    right: 1rem;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
